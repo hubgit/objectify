@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>phparise</title>
+
+<style>
+	body { font-family: sans-serif; }
+	input { display: block; width: 100%; }
+	output { white-space: pre; }
+</style>
+
+<script src="deparam.js"></script>
+<script src="phparise.js"></script>
+
+<p>Enter a string of key/value pairs to convert it to PHP array syntax:</p>
+
+<form onsubmit="return false" oninput="output.value = phparise(deparam(input.value))">
+  	<input type="text" name="input" placeholder="key1=value1&amp;key2=value2">
+	<output name="output"></output>
+</form>
+
