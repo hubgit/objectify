@@ -13,8 +13,14 @@
 
 <p>Enter a string of key/value pairs to convert it to PHP array syntax:</p>
 
-<form onsubmit="return false" oninput="output.value = phparise(deparam(input.value))">
+<form oninput="output.value = phparise(deparam(input.value))">
   	<input type="text" name="input" placeholder="key1=value1&amp;key2=value2">
 	<output name="output"></output>
 </form>
+
+<script>
+document.forms[0].input.value = decodeURIComponent(window.location.search.substr(7));
+document.forms[0].dispatchEvent(new Event("input"));
+</script>
+
 
