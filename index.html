@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>phparise</title>
+<title>objectify</title>
 
 <style>
 	body { font-family: sans-serif; }
@@ -9,11 +9,11 @@
 </style>
 
 <script src="deparam.js"></script>
-<script src="phparise.js"></script>
+<script src="objectify.js"></script>
 
-<p>Enter a string of key/value pairs to convert it to PHP array syntax:</p>
+<p>Enter a string of key/value pairs to convert it to PHP and JSON array syntax:</p>
 
-<form oninput="output.value = phparise(deparam(input.value))">
+<form oninput="output.value = objectify(deparam(input.value))">
   	<input type="text" name="input" placeholder="key1=value1&amp;key2=value2">
 	<output name="output"></output>
 </form>
