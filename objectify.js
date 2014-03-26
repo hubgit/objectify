@@ -7,7 +7,7 @@ var objectify = function(obj) {
 		if (obj.hasOwnProperty(key)) {
 			php.push("'" + key + "' => '" + escape_single_quote(obj[key]) + "'");
 			json.push('"' + key + '": "' + escape_double_quote(obj[key]) + '"');
-			js.push(key + ': "' + escape_double_quote(obj[key]) + '"');
+			js.push(key + ": '" + escape_single_quote(obj[key]) + "'");
 		}
 	}
 
