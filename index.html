@@ -13,7 +13,7 @@
 
 <p>Enter a string of key/value pairs to convert it to PHP and JSON array/object syntax:</p>
 
-<form oninput="output.value = objectify(deparam(input.value))">
+<form oninput="output.value = objectify(deparam(input.value.replace(/^http.+\?/, ''))">
   	<input type="text" name="input" placeholder="key1=value1&amp;key2=value2">
 	<output name="output"></output>
 </form>
