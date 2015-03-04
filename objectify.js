@@ -12,9 +12,9 @@ var objectify = function(obj) {
 	}
 
 	var output = [
-		"array(\n\t" + php.join(",\n\t") + "\n)",
-		"{\n\t" + json.join(",\n\t") + "\n}",
-		"{\n\t" + js.join(",\n\t") + "\n}",
+		"php:\narray(\n\t" + php.join(",\n\t") + "\n)",
+		"json:\n{\n\t" + json.join(",\n\t") + "\n}",
+		"javascript:\n{\n\t" + js.join(",\n\t") + "\n}",
 	];
 
 	return output.join("\n\n");
